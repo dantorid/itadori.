@@ -1,0 +1,16 @@
+-- Скрипт для персонажа Итадори Юдзи
+
+-- Функция для смены персонажа на Итадори
+function switchToItadori()
+    local player = game.Players.LocalPlayer
+    if player.Character then
+        -- Код для замены модели персонажа на Итадори
+        local newCharacter = game.ServerStorage.ItadoriModel:Clone()  -- Предполагаем, что модель Итадори сохранена в ServerStorage
+        newCharacter.Parent = game.Workspace
+        player.Character = newCharacter
+        player:LoadCharacter()
+    end
+end
+
+-- Включить автоматическую смену персонажа на Итадори при запуске
+switchToItadori()
